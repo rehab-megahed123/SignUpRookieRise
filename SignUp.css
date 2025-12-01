@@ -175,3 +175,167 @@ form {
   line-height: 29px;
   letter-spacing: -0.09em;
 }
+.toast-notification-english-success {
+   width: 90%;
+  max-width: 300px;
+  background: #24D23B80; /* اللون الأساسي */
+  border-bottom: 8px solid #24D23B; /* شريط تحت */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 23px 17px 6px;
+  position: fixed;
+  bottom: 30px; /* مكان الظهور أسفل الشاشة */
+  left: 80%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.toast-notification-arabic-success {
+  width: 90%;
+  max-width: 300px;
+  height: 50px;
+  background: #24D23B80; /* اللون الأساسي */
+  border-bottom: 8px solid #24D23B; /* شريط تحت */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 23px 17px 6px;
+  position: fixed;
+  bottom: 30px; /* مكان الظهور أسفل الشاشة */
+  right: 30%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.toast-notification-english-fail {
+ min-width: 350px;
+  height: 50px;
+  background: #FD566880; /* اللون الأساسي */
+  border-bottom: 8px solid #FD5668; /* شريط تحت */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 23px 17px 6px;
+  position: fixed;
+  bottom: 30px; /* مكان الظهور أسفل الشاشة */
+  left: 80%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.toast-notification-arabic-fail {
+  width: 90%;
+  max-width: 300px;
+  background: #FD566880;
+  border-bottom: 8px solid #FD5668;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  position: fixed;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+
+ 
+}
+
+@media (max-width: 412px) {
+  .toast-notification-arabic-fail {
+    width: 92%;
+    max-width: 200px;
+    padding: 10px 14px;
+    gap: 8px;
+    bottom: 15px;
+    right:1%;
+  }
+  .toast-notification-arabic-success{
+    width: 92%;
+    max-width: 200px;
+    padding: 10px 14px;
+    gap: 8px;
+    bottom: 15px;
+    right:1%;
+  }
+  .toast-notification-english-fail {
+    width: 92%;
+     max-width: 200px;
+    padding: 10px 14px;
+    gap: 8px;
+    bottom: 15px;
+    left: 50%;
+  }
+  .toast-notification-english-success {
+    width: 92%;
+     max-width: 200px;
+    padding: 10px 14px;
+    gap: 8px;
+    bottom: 15px;
+    left: 50%;
+  }
+}
+
+
+/* عند ظهورها */
+.toast-notification-english-fail.show,
+.toast-notification-arabic-fail.show,.toast-notification-english-success.show,
+.toast-notification-arabic-success.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ستايل النص */
+.toast-english-text {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+  letter-spacing: -0.09em;
+  color: #FFFFFF;
+  margin-left: 1px;
+  margin-top: 1px;
+  flex-wrap: wrap;
+  
+}
+.toast-arabic-text {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+  letter-spacing: -0.09em;
+  color: #FFFFFF;
+  margin-right: 1px;
+  direction: rtl;
+  text-align: right;
+}
+.toast-english-close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.toast-arabic-close {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

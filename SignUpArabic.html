@@ -12,6 +12,16 @@
 </head>
 
 <body>
+    <div id="toast-success" class="toast-notification-arabic-success ">
+        <img src="assets/close.png" class="toast-arabic-close">
+        <img src="assets/check-circle.png">
+    <span class="toast-arabic-text">افحص بريدك الإلكتروني لتعيين كلمة المرور.</span>
+</div>
+ <div id="toast-fail" class="toast-notification-arabic-fail">
+        <img src="assets/close.png" class="toast-arabic-close">
+        <img src="assets/error-circle.png">
+    <span class="toast-arabic-text">حدث خطأ، حاول مرة أخرى.</span>
+</div>
 
 
     <div class="container py-3">
@@ -122,6 +132,19 @@
 
 
 </body>
-<!-- <script src="SignUp.js"></script> -->
+<script>
+    const toast = document.getElementById("toast-fail");
+    const signUpBtn = document.querySelector(".custom-SignUpbutton");
+
+    signUpBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // علشان ما يعملش Submit
+
+        toast.classList.add("show");
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 3000); // تختفي بعد 3 ثواني
+    });
+</script>
 
 </html>
