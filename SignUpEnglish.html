@@ -15,7 +15,7 @@
 
 <body>
     
-    <div id="toast-success" class="toast-notification-english-success ">
+    <div id="toast-success" class="toast-notification-english-success show ">
         <img src="assets/close.png" class="toast-english-close">
         <img src="assets/check-circle.png">
     <span class="toast-english-text">Check your email to set your password.</span>
@@ -136,19 +136,6 @@
 
 
 </body>
-<script>
-    const toast = document.getElementById("toast-success");
-    const signUpBtn = document.querySelector(".custom-SignUpbutton");
 
-    signUpBtn.addEventListener("click", function (e) {
-        e.preventDefault(); // علشان ما يعملش Submit
-
-        toast.classList.add("show");
-
-        setTimeout(() => {
-            toast.classList.remove("show");
-        }, 3000); // تختفي بعد 3 ثواني
-    });
-</script>
 
 </html>
